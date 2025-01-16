@@ -5,7 +5,10 @@ import Home from "./Pages/Home/Home";
 import Counter from "./Pages/Counter/Counter";
 import Todo from "./Pages/Todo/Todo";
 import Graph from "./Pages/Graph/Graph";
-
+import Store from "./Pages/Store/Store";
+import CartPage from "./Pages/Store/CartPage";
+import OneProductPage from "./Pages/Store/OneProductPage";
+import { ProductData } from "./Features/Slices/DataApi";
 function App() {
   return (
     <BrowserRouter>
@@ -16,6 +19,9 @@ function App() {
           <Route path="/counter" element={<Counter />} />
           <Route path="/todo" element={<Todo />} />
           <Route path="/graph" element={<Graph />} />
+          <Route path="/cart" element={<CartPage />} />
+          <Route path="/store" element={<Store />} />
+          <Route path="/store/:id" element={<OneProductPage />} />
         </Routes>
       </div>
     </BrowserRouter>

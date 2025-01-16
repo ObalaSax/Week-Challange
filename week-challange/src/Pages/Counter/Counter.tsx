@@ -18,13 +18,25 @@ function Counter() {
     creaseDispatch(decrementNumber());
   };
   return (
-    <div>
-      <div>
-        <h1>{myCountSelector}</h1>
-      </div>
-      <div>
-        <button onClick={handleIncrement}>Increment</button>
-        <button onClick={handleDecrement}>Decrement</button>
+    <div className="bg-gradient-to-b from-red-800 to-blue-800 w-full h-lvh content-center justify-items-center">
+      <div className="bg-white w-2/5 h-1/4 items-center justify-items-center rounded-lg content-center">
+        <div>
+          <h1 className="font-bold text-9xl">{myCountSelector}</h1>
+        </div>
+        <div>
+          <button
+            className="p-3 bg-blue-600 text-white rounded-lg m-2 mt-9"
+            onClick={handleIncrement}
+          >
+            Increment
+          </button>
+          <button
+            className="p-3 bg-blue-600 text-white rounded-lg m-2 mt-10"
+            onClick={handleDecrement}
+          >
+            Decrement
+          </button>
+        </div>
       </div>
     </div>
   );
