@@ -8,7 +8,7 @@ import Graph from "./Pages/Graph/Graph";
 import Store from "./Pages/Store/Store";
 import CartPage from "./Pages/Store/CartPage";
 import OneProductPage from "./Pages/Store/OneProductPage";
-import { ProductData } from "./Features/Slices/DataApi";
+
 function App() {
   return (
     <BrowserRouter>

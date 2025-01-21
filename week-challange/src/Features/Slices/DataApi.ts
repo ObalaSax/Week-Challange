@@ -19,10 +19,10 @@ export const DataApi = createApi({
     getAllProducts: builder.query({
       query: () => "products",
     }),
-    getOneProduct: builder.query({
-      query: () => `/products/id`,
+    getOneProductId: builder.query({
+      query: (id) => `/products/${id}`,
     }),
   }),
 });
 
-export const { useGetAllProductsQuery, useGetOneProductQuery } = DataApi;
+export const { useGetAllProductsQuery, useGetOneProductIdQuery } = DataApi;
