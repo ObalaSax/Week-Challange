@@ -5,27 +5,6 @@ import { useNavigate } from "react-router-dom";
 function Store() {
   const { data: myProducts, isLoading } = useGetAllProductsQuery();
 
-  /*
-  //Pagination Manenoz
-  const [pageNumber, setPageNumber] = useState(0); //which Page we are in
-
-  const productsPerPage = 10;
-  const pagesVisited = pageNumber * productsPerPage;
-
-  const displayProducts = myProducts.products
-    .slice(pagesVisited, pagesVisited + productsPerPage)
-    .map((product) => (
-      <div key={product.id}>
-        <ProductCard />
-      </div>
-    ));
-  //Actual Page Count Calculation
-
-  const pageCount = Math.ceil(myProducts.length / productsPerPage);
-  //End Of Pagination Manenoz
-
-  */
-
   const productNavigation = useNavigate();
   if (isLoading) {
     return (
@@ -59,15 +38,6 @@ function Store() {
             />
           </div>
         ))}
-        {/*{displayProducts}*/}
-        <div>
-          {/*
-         <ReactPaginate
-            previousLabel="Prev"
-            nextLabel="Next"
-            pageCount={pageCount}
-          /> */}
-        </div>
       </div>
     </div>
   );
